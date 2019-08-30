@@ -1,13 +1,14 @@
 package bank
 
-type account struct {
+// Account : a simple bank account
+type Account struct {
 	balance int
 }
 
-func (a *account) withdraw(amount int) {
+func (a *Account) withdraw(amount int) {
 	a.balance = a.balance - amount
 }
 
-func (a *account) deposit(amount int) {
+func (a *Account) deposit(amount int) {
 	a.balance = a.balance + amount
 }
