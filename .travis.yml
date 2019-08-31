@@ -6,6 +6,11 @@ go:
 before_install:
   - go get -t -v ./...
 
+cache:
+  directories:
+    - $HOME/.cache/go-build
+    - $HOME/gopath/pkg/mod
+
 script:
   - go test ./... -race -coverprofile=coverage.txt -covermode=atomic
 
